@@ -7,7 +7,7 @@ on:
 
 env:
   PLUGIN_NAME: YTS
-  ICON_URL: https://yts.bz/assets/images/website/logo-YTS-lt.svg
+  ICON_URL: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Logo-YTS.svg/1280px-Logo-YTS.svg.png
 
 jobs:
   build:
