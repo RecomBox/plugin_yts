@@ -18,8 +18,9 @@ export default async function get_torrents(input_payload: get_torrents_types.Inp
     let slug:String = data.data.movie.slug??"";
 
     let torrent_list = data?.data?.movie?.torrents??[]
-        .filter((t:any) => t.seeds > 0)
-        .sort((a:any, b:any) => parseInt(b.seeds) - parseInt(a.seeds));
+        .filter((t:any) => parseInt(t.seeds??0) > 0);
+
+    torrent_list.sort((a:any, b:any) => parseInt(b.seeds??0) - parseInt(a.seeds??0));
 
     for (const torrent of torrent_list){
         new_output_payload.push({

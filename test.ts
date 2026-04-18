@@ -23,7 +23,7 @@ import { get_sources, get_torrents } from "./src/plugin";
 describe("get_torrents", () => {
     it("should fetch sources", async () => {
         let result = await get_torrents({
-            id: "tt31728330",
+            id: "tt4154796",
             source: "movies",
             page: 1
         })
