@@ -6,8 +6,8 @@ on:
       - main
 
 env:
-  PLUGIN_NAME: The Pirate Bay
-  ICON_URL: https://torrindex.net/images/tpb.jpg
+  PLUGIN_NAME: YTS
+  ICON_URL: https://yts.bz/assets/images/website/logo-YTS-lt.svg
 
 jobs:
   build:
