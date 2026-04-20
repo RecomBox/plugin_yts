@@ -15,13 +15,13 @@ export default async function get_torrents(input_payload: get_torrents_types.Inp
 
     let data = res.body_json();
 
-    let slug:String = data.data.movie.slug??"";
+    let slug:String = data.data.movie.slug||"";
 
-    let torrent_list = data?.data?.movie?.torrents??[];
+    let torrent_list = data?.data?.movie?.torrents||[];
     
-    torrent_list = torrent_list.filter((t:any) => parseInt(t.seeds??0) > 0);
+    torrent_list = torrent_list.filter((t:any) => parseInt(t.seeds||0) > 0);
 
-    torrent_list.sort((a:any, b:any) => parseInt(b.seeds??0) - parseInt(a.seeds??0));
+    torrent_list.sort((a:any, b:any) => parseInt(b.seeds||0) - parseInt(a.seeds||0));
 
     for (const torrent of torrent_list){
         new_output_payload.push({
