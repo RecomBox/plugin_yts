@@ -19,7 +19,6 @@ export default async function get_torrents(input_payload: get_torrents_types.Inp
 
     let torrent_list = data?.data?.movie?.torrents||[];
     
-    torrent_list = torrent_list.filter((t:any) => parseInt(t.seeds||0) > 0);
 
     torrent_list.sort((a:any, b:any) => parseInt(b.seeds||0) - parseInt(a.seeds||0));
 
